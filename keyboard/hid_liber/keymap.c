@@ -91,6 +91,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #include "keymap_custom.h"
 #elif defined(LAYOUT_ALARICLJS)
     #include "keymap_alaricljs.h"
+#elif defined(LAYOUT_PRIYADI)
+    #include "keymap_priyadi.h"
 #elif defined(LAYOUT_ISO)
     #include "keymap_iso.h"
 #elif defined(LAYOUT_ANSI)
