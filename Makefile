@@ -7,6 +7,9 @@ compile:
 	cd keyboard/s60-x && make KEYMAP=priyadi
 
 flash:
-	@echo put keyboard in programming mode now
-	@sleep 10
-	cd keyboard/s60-x && sudo dfu-util -d 1c11:b007 -D S60-X_lufa.elf
+	cd keyboard/s60-x && \
+	echo start programming mode now && \
+	sleep 10 && \
+	sudo dfu-programmer atmega32u4 erase && \
+	sudo dfu-programmer atmega32u4 flash S60-X_lufa.hex && \
+	sudo dfu-programmer atmega32u4 start
