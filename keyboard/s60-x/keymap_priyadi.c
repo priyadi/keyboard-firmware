@@ -19,7 +19,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TAB,    Q,    W,   E,   R,   T,   Y,   U,   I,    O,    P, LBRC, RBRC, BSLS,       \
         BSPC,    A,    S,   D,   F,   G,   H,   J,   K,    L,  FN3, QUOT,   NO,  ENT,       \
          FN1,   NO,    Z,   X,   C,   V,   B,   N,   M, COMM,  DOT, SLSH,   NO,  FN2,  DEL, \
-        LCTL, LGUI, LALT,                FN0,                   NO, RALT, RGUI, RCTL),
+        LCTL, LGUI, LALT,                FN0,                   NO, RALT,  FN4, RCTL),
 
     /* Keymap 1: Hybrid ESC and hard semicolon
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
@@ -73,5 +73,8 @@ const uint16_t PROGMEM fn_actions[] = {
     [1] = ACTION_LAYER_MODS(1, MOD_LSFT),
     [2] = ACTION_LAYER_MODS(1, MOD_RSFT),
     // semicolonFn
-    [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN)
+    [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN),
+    // Hybrid R-Super: Super when pressed, ScrollLock when tapped (mapped to Compose in my Linux OS)
+    // Also function as Menu key using SpaceFn/SemicolonFn
+    [4] = ACTION_MODS_TAP_KEY(MOD_RGUI, KC_SLCK)
 };
