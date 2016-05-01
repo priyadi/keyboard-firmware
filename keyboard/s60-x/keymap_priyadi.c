@@ -19,7 +19,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          TAB,    Q,    W,   E,   R,   T,   Y,   U,   I,    O,    P, LBRC, RBRC, BSLS,       \
         BSPC,    A,    S,   D,   F,   G,   H,   J,   K,    L,  FN3, QUOT,   NO,  ENT,       \
          FN1,   NO,    Z,   X,   C,   V,   B,   N,   M, COMM,  DOT, SLSH,   NO,  FN2,  DEL, \
-        LCTL, LGUI, LALT,                FN0,                 RALT, RGUI, SLCK, RCTL),
+        LCTL, LGUI, LALT,                FN0,                   NO, RALT, RGUI, RCTL),
 
     /* Keymap 1: Hybrid ESC and hard semicolon
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
