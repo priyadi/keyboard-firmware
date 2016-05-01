@@ -21,7 +21,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          FN1,   NO,    Z,   X,   C,   V,   B,   N,   M, COMM,  DOT, SLSH,   NO,  FN2,  DEL, \
         LCTL, LGUI, LALT,                FN0,                 RALT, RGUI, SLCK, RCTL),
 
-    /* Overlay 1: Hybrid ESC and hard semicolon
+    /* Keymap 1: Hybrid ESC and hard semicolon
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
 │  `  │     │     │     │     │     │     │     │     │     │     │     │     │▒▒▒▒▒│     │
 ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
@@ -67,10 +67,11 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Fn action definition
  */
 const uint16_t PROGMEM fn_actions[] = {
-    // [0] = ACTION_LAYER_TAP_KEY(1, KC_SPACE),
-    // [1] = ACTION_MODS_KEY(MOD_LSFT, KC_GRV),    // tilde
+    // spaceFn
     [0] = ACTION_LAYER_TAP_KEY(2, KC_SPC),
+    // Hybrid Esc (shift-Esc = ~), & ignore SemicolonFn when shifted (shift-; = :)
     [1] = ACTION_LAYER_MODS(1, MOD_LSFT),
     [2] = ACTION_LAYER_MODS(1, MOD_RSFT),
+    // semicolonFn
     [3] = ACTION_LAYER_TAP_KEY(2, KC_SCLN)
 };
